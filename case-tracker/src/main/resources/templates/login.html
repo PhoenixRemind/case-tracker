@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head th:replace="fragments :: head"></head>
-<body class="container">
-
-<header th:replace="fragments :: header"></header>
-
-<form method="post">
-    <div class="form-group">
-        <label th:for="username">Username
-            <input class="form-control" th:field="${loginFormDTO.username}">
-        </label>
-        <p class="error" th:errors="${loginFormDTO.username}"></p>
-    </div>
-    <div class="form-group">
-        <label>Password
-            <input class="form-control" th:field="${loginFormDTO.password}" type="password">
-        </label>
-        <p class="error" th:errors="${loginFormDTO.password}"></p>
-    </div>
-    <input type="checkbox" value="Stay signed in" />
-    <input type="submit" class="btn btn-primary" value="Sign In" />
-</form>
-
-<p>Don't have an account? <a href="/register">Register for one.</a></p>
-
-</body>
+    <head th:replace="fragments :: head">
+    </head>
+    <body>
+        <div class="float-container">
+            <div class="float-left">
+                <img src="https://s0.2mdn.net/1384245/01222020-112440729-19D30294_CRE_Texting_updated_300x600.jpg" alt="Advertisement">
+                <p>Ad info | Ad Feedback</p>
+            </div>
+            <div class="float-right">
+                <form method="post">
+                    <div class="form-group">
+                        <h1>Xfinity</h1>
+                        <label th:for="username">XFINITY ID
+                            <input class="form-control" th:field="${loginFormDTO.username}">
+                        </label>
+                        <p class="error" th:errors="${loginFormDTO.username}"></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Password
+                            <input class="form-control" th:field="${loginFormDTO.password}" type="password">
+                        </label>
+                        <p class="error" th:errors="${loginFormDTO.password}"></p>
+                        <p> <input type="checkbox" value="Stay signed in" />  Stay signed in</p>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Sign In" />
+                    <hr>
+                    <p>Forgot Xfinity ID or password?</p>
+                    <hr>
+                    <p>Don't have an Xfinity ID? <a href="/register">Create one</a></p>
+                    <hr>
+                    <p>By signing in, you agree to our Terms of Service and Privacy Policy</p>
+                    <hr>
+                </form>
+            </div>
+        </div>
+    </body>
 </html>
