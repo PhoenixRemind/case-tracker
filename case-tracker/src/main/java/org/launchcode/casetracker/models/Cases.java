@@ -5,25 +5,17 @@ import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
 @Entity
-public class Case extends AbstractEntity {
+public class Cases extends AbstractEntity {
 
     @NotNull
     private String currentStatus;
 
-    @ManyToOne
-    private User user;
+    public Cases() {}
 
-    public Case() {}
-
-    public Case(String currentStatus, User user) {
+    public Cases(String currentStatus) {
         super();
         this.currentStatus = currentStatus;
-        this.user = user;
     }
-
-    public User getUser() { return user; }
-
-    public void setUser(User user) { this.user = user; }
 
     public String getCurrentStatus() { return currentStatus; }
 
