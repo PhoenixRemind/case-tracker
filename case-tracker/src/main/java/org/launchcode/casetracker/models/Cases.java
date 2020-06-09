@@ -7,15 +7,21 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class Cases extends AbstractEntity {
 
+    @ManyToOne
+    private User user;
+
     @NotNull
     private String currentStatus;
 
     public Cases() {}
 
-    public Cases(String currentStatus) {
+    public Cases(String currentStatus, User user) {
         super();
         this.currentStatus = currentStatus;
+        this.user = user;
     }
+
+    public User getUser() { return user; }
 
     public String getCurrentStatus() { return currentStatus; }
 
