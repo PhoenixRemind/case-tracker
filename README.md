@@ -1,4 +1,8 @@
 ##Capstone Project Overview
+
+Trello Link: https://trello.com/b/UrqJFPvw/liftoff-assignments
+
+Wireframe Link: https://balsamiq.cloud/s97wfri/phy3tlp/r2278
 **********************************************
 ##Application Name: 
 CX360
