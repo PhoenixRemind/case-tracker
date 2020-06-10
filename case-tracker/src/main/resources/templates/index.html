@@ -3,7 +3,7 @@
 <head th:replace="fragments :: head"></head>
 <body>
 <div class="topnav">
-    <a class="active" href="#index">Home</a>
+    <a class="active" href="http://localhost:8080">Home</a>
     <a href="https://www.xfinity.com/learn/offers?CMP=ILC_shop_myxfinity_re&pc=1">TV</a>
     <a href="https://www.xfinity.com/learn/offers?CMP=ILC_shop_myxfinity_re&pc=1">Internet</a>
     <a href="https://www.xfinity.com/learn/offers?CMP=ILC_shop_myxfinity_re&pc=1">Home</a>
@@ -11,7 +11,7 @@
 </div>
 
 <div class="borderBox">
-    <p>Hello <span th:text="${username}"></span>, anything we can help with today?</p>
+    <p id="padBlock">Hello <span th:text="${username}"></span>, anything we can help with today?</p>
     <hr>
 </div>
 
@@ -25,7 +25,11 @@
 <div class="borderBox">
     <h1>Support</h1>
     <hr>
-    <p>Insert Case Numbers Here</p>
+    <thead>
+    <tr th:each="case : ${cases}">
+        <td th:text="${case}"></td>
+    </tr>
+    </thead>
     <hr>
 </div>
 
