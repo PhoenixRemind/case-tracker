@@ -23,6 +23,8 @@ public class Cases extends AbstractEntity {
 
     public User getUser() { return user; }
 
+    public void setUser(User user) { this.user = user; }
+
     public String getCurrentStatus() { return currentStatus; }
 
     public void setCurrentStatus(String currentStatus) { this.currentStatus = currentStatus; }

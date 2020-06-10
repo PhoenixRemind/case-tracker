@@ -143,5 +143,9 @@ a:hover {
     margin:0 0 2px 0;
 }
 
+.flex-chatbox {
+    border: 2px solid black;
+}
+
 
 
