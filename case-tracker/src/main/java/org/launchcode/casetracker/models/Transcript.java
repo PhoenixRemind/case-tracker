@@ -42,6 +42,8 @@ public class Transcript extends AbstractEntity {
 
     public User getUser() { return user; }
 
+    public void setUser(User user) { this.user = user; }
+
     public void setCases(Cases cases) { this.cases = cases; }
 
     public String getMessages() {

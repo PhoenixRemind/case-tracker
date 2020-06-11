@@ -1,6 +1,7 @@
 package org.launchcode.casetracker.models;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 

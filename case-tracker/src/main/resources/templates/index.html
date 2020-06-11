@@ -2,62 +2,64 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="fragments :: head"></head>
 <body>
-<div class="topnav">
-    <a class="active" href="http://localhost:8080">Home</a>
-    <a href="https://www.xfinity.com/learn/offers?CMP=ILC_shop_myxfinity_re&pc=1">TV</a>
-    <a href="https://www.xfinity.com/learn/offers?CMP=ILC_shop_myxfinity_re&pc=1">Internet</a>
-    <a href="https://www.xfinity.com/learn/offers?CMP=ILC_shop_myxfinity_re&pc=1">Home</a>
-    <a href="cases">Cases Test Link</a>
-</div>
+    <div class="topnav">
+        <a class="active" href="http://localhost:8080">Account Overview</a>
+        <a href="https://www.xfinity.com/learn/offers?CMP=ILC_shop_myxfinity_re&pc=1">TV</a>
+        <a href="https://www.xfinity.com/learn/offers?CMP=ILC_shop_myxfinity_re&pc=1">Internet</a>
+        <a href="https://www.xfinity.com/learn/offers?CMP=ILC_shop_myxfinity_re&pc=1">Home</a>
+        <a href="cases">Cases Test Link</a>
+    </div>
 
-<div class="borderBox">
-    <p id="padBlock">Hello <span th:text="${username}"></span>, anything we can help with today?</p>
-    <hr>
-</div>
+    <div class="borderBox">
+        <p id="padBlock">Hello <span th:text="${username}"></span>, anything we can help with today?</p>
+        <hr>
+    </div>
 
-<div class="borderBox">
-    <h1>Account Overview</h1>
-    <hr>
-    <p>You are currently signed in as: <span th:text="${username}"></span></p>
-    <hr class="padhr">
-</div>
+    <div class="borderBox">
+        <h1>Account Overview</h1>
+        <hr>
+        <p>You are currently signed in as: <span th:text="${username}"></span></p>
+        <hr class="padhr">
+    </div>
 
-<div class="borderBox">
-    <h1>Support</h1>
-    <hr>
-    <thead>
-    <tr th:each="case : ${cases}">
-        <td th:text="${case}"></td>
-    </tr>
-    </thead>
-    <hr>
-</div>
+    <div class="borderBox">
+        <h1>Support</h1>
+        <hr>
+        <thead>
+        <tr th:each="case : ${cases}">
+            <td th:text="${case.id}"></td>
+        </tr>
+        </thead>
+        <span th:text="${cases}"></span>
+        <span th:text="${case}"></span>
+        <hr>
+    </div>
 
-<div class="borderBox">
-    <h1>Billing Overview</h1>
-    <hr>
-    <p>Date Due: July 7<br>
-        Amount Due: $99.99</p>
-    <hr>
-    <p>Make a payment</p>
-    <hr>
-    <p>View bill details & history</p>
-    <hr>
-    <p>Manage billing preferences</p>
-    <hr>
-</div>
+    <div class="borderBox">
+        <h1>Billing Overview</h1>
+        <hr>
+        <p>Date Due: July 7<br>
+            Amount Due: $99.99</p>
+        <hr>
+        <p>Make a payment</p>
+        <hr>
+        <p>View bill details & history</p>
+        <hr>
+        <p>Manage billing preferences</p>
+        <hr>
+    </div>
 
-<div class="borderBox">
-    <h1>TV</h1>
-</div>
+    <div class="borderBox">
+        <h1>TV</h1>
+    </div>
 
-<div class="borderBox">
-    <h1>Internet</h1>
-</div>
+    <div class="borderBox">
+        <h1>Internet</h1>
+    </div>
 
-<div class="borderBox">
-    <h1>Home</h1>
-</div>
+    <div class="borderBox">
+        <h1>Home</h1>
+    </div>
 
 </body>
-</html>>
+</html>
