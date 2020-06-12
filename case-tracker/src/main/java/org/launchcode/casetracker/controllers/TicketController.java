@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("cases")
-public class CasesController {
+public class TicketController {
 
     @Autowired
     private TicketRepository ticketRepository;
