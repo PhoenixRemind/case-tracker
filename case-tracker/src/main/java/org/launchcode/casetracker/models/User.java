@@ -11,8 +11,8 @@ import java.util.List;
 @Entity
 public class User extends AbstractEntity {
 
-    @OneToMany
-    private List<Cases> cases = new ArrayList<>();
+    @OneToMany(mappedBy = "user")
+    private List<Ticket> aCases = new ArrayList<>();
 
     @NotNull
     private String username;

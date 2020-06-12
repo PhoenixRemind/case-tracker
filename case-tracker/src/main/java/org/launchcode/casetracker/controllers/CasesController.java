@@ -1,7 +1,7 @@
 package org.launchcode.casetracker.controllers;
 
 import org.launchcode.casetracker.models.User;
-import org.launchcode.casetracker.models.data.CasesRepository;
+import org.launchcode.casetracker.models.data.TicketRepository;
 import org.launchcode.casetracker.models.data.TranscriptRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,7 +18,7 @@ import javax.servlet.http.HttpSession;
 public class CasesController {
 
     @Autowired
-    private CasesRepository caseRepository;
+    private TicketRepository ticketRepository;
 
     @Autowired
     private TranscriptRepository transcriptRepository;

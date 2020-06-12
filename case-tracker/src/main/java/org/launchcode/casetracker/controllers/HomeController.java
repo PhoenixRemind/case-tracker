@@ -1,9 +1,9 @@
 package org.launchcode.casetracker.controllers;
 
 
-import org.launchcode.casetracker.models.Cases;
+import org.launchcode.casetracker.models.Ticket;
 import org.launchcode.casetracker.models.User;
-import org.launchcode.casetracker.models.data.CasesRepository;
+import org.launchcode.casetracker.models.data.TicketRepository;
 import org.launchcode.casetracker.models.data.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
-import java.util.List;
 import java.util.Optional;
 
 
@@ -27,7 +26,7 @@ public class HomeController {
     AuthenticationController authenticationController;
 
     @Autowired
-    CasesRepository casesRepository;
+    TicketRepository ticketRepository;
 
     @Autowired
     UserRepository userRepository;
@@ -49,17 +48,18 @@ public class HomeController {
     @GetMapping("index")
     public String displayCases(@RequestParam Integer caseId, Model model) {
 
-        Optional<Cases> result = casesRepository.findById(caseId);
+        Optional<Ticket> result = ticketRepository.findById(caseId);
 
-        Cases cases = result.get();
+        Ticket aCase = result.get();
         model.addAttribute("cases", caseId);
-        casesRepository.save(cases);
+
+        ticketRepository.save(aCase);
 
         return "index";
     }
 
     @RequestMapping("index")
-    public String showCases(@ModelAttribute @Valid Model model, Cases newCase, @RequestParam int userId) {
+    public String showCases(@ModelAttribute @Valid Model model, Ticket newCase, @RequestParam int userId) {
 
         newCase.setUser(userRepository.findById(userId).get());
 
